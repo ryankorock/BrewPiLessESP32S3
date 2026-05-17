@@ -96,7 +96,7 @@
 // Enable humidity sensor
 //
 #ifndef EnableBME280Support
-#define EnableBME280Support false
+#define EnableBME280Support true
 #endif
 //
 //////////////////////////////////////////////////////////////////////////
@@ -317,7 +317,7 @@
 #define FS_EEPROM true
 #endif
 
-#define BPL_VERSION "4.5"
+#define BPL_VERSION "4.4"
 
 
 #ifndef MORE_PINS_CONFIGURATION
@@ -344,41 +344,37 @@
 // pins
 #ifdef ESP32
 
-#define PIN_SDA 21
-#define PIN_SCL 22
+#define PIN_SDA 8
+#define PIN_SCL 9
 
 
-#define oneWirePin    23
+#define oneWirePin    10
 
-#define actuatorPin1  16
-#define actuatorPin2  17
-#define actuatorPin3  19
-#define actuatorPin4  27
-#define actuatorPin5  26
+#define actuatorPin1  1
+#define actuatorPin2  2
+#define actuatorPin3  41
+#define actuatorPin4  42
+#define actuatorPin5  45
 
 #if MORE_PINS_CONFIGURATION
 
-#define actuatorPin6  18
+#define actuatorPin6  46
 
-#define fanPin 14
-#define doorPin 34
+#define fanPin 47
+#define doorPin 48
 
-#define BuzzPin 4
+#define BuzzPin 21
 
 #else
-#define BuzzPin       18
+#define BuzzPin       21
 #endif
 // 34,35,66,39 input only
-#define rotaryAPin      32
-#define rotaryBPin      33
-#define rotarySwitchPin 25
+#define rotaryAPin      3
+#define rotaryBPin      4
+#define rotarySwitchPin 5
 
 // Only ADC1 (pin 32~39) is allowed 
-#if CONFIG_IDF_TARGET_ESP32S3
-#define PressureAdcPin  4
-#else
 #define PressureAdcPin  36
-#endif
 
 #else // #ifdef ESP32
 #define NODEMCU_PIN_A0 17	// Analog
