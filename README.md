@@ -1,3 +1,10 @@
+This is a fork of BrewPiLess from Vitotai that I created to add support for the newer ESP32-S3 boards. I made changes to the following files
+platform.io
+config.h
+platform.cpp
+
+I have this running now on 2 different ESP32-S3 boards.
+
 # BrewPiLess
  **Note: Beer Profile exteds to maximum 10 steps. Your setting might lost. There is an utility, /extra/backup.htm. You can upload this file and use it to backup/restore the settings.**
 
